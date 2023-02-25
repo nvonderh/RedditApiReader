@@ -12,11 +12,12 @@ Once it is created you will need to find the Client Id (should be underneath the
 Once located you will need to add them to the user secrets.
 
 Setup your user secrets like so:
-{
-  "RedditApiWebApp": {
-    "ClientId": "YOUR_CLIENT_ID_HERE",
-    "ClientSecret": "YOUR_CLIENT_SECRET_HERE"
-  }
+
+{  
+&ensp;"RedditApiWebApp": {  
+&emsp;"ClientId": "YOUR_CLIENT_ID_HERE",  
+&emsp;"ClientSecret": "YOUR_CLIENT_SECRET_HERE"  
+&ensp;}  
 }
 
 You will also need to run an Update-Database command from the Package Manager Console
