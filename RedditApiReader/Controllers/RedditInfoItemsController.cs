@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
-using Azure.Core;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json.Linq;
-using NuGet.Packaging;
 using RedditApiReader.Data;
 using RedditApiReader.Models;
 
@@ -66,32 +56,6 @@ namespace RedditApiReader.Controllers
         {
             return View(await _context.RedditInfoItem.ToListAsync());
         }
-
-        //// GET: RedditInfoItems/Retrieve
-        //public async Task<IActionResult> Retrieve()
-        //{
-        //    List<RedditInfoItem> returnedList = new List<RedditInfoItem>();
-        //    string url = OAUTH_API_DOMAIN + "/new";
-
-        //    var task = client.GetAsync(url);
-        //    var response = task.Result;
-
-        //    if (response.StatusCode != System.Net.HttpStatusCode.OK)
-        //    {
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    if (response != null)
-        //    {
-        //        var jsonString = await response.Content.ReadAsStringAsync();
-        //        var jsonObject = Newtonsoft.Json.Linq.JObject.Parse(jsonString);
-        //        returnedList.AddRange(GetRedditInfoItems(jsonObject));
-
-        //        _context.AddRange(returnedList);
-        //        await _context.SaveChangesAsync();
-        //    }
-
-        //    return RedirectToAction(nameof(Index));
-        //}
 
         private bool RedditInfoItemExists(int id)
         {

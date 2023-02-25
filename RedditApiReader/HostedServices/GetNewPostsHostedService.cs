@@ -13,7 +13,6 @@ namespace RedditApiReader.HostedServices
         private readonly ILogger<GetNewPostsHostedService> _logger;
         private readonly IConfiguration _config;
         private readonly IServiceScopeFactory _scopeFactory;
-        //private readonly RedditApiReaderContext _context;
         private Timer? _timer = null;
 
         private string apiClientId;
@@ -26,7 +25,6 @@ namespace RedditApiReader.HostedServices
         {
             _logger = logger;
             _config = config;
-            //_context = context;
             _scopeFactory = scopeFactory;
 
             client.DefaultRequestHeaders.Add("User-Agent", "NVH API App");
