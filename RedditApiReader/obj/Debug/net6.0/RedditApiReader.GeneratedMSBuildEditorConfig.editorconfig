@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nathan\Documents\GitHub\RedditApiReader\RedditApiReader
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/Help.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXEhlbHAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

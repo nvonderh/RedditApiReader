@@ -68,5 +68,11 @@ namespace RedditApiReader.Controllers
         {
             return View(await _context.RedditInfoItem.ToListAsync());
         }
+
+        // GET: RedditInfoItems
+        public IActionResult Help()
+        {
+            return View();
+        }
     }
 }
