@@ -1,0 +1,49 @@
+﻿@model RedditApiReader.Models.RedditDisplayViewer
+
+@{
+    string analyticsType = Model.AnalysisType;
+    var total = Model.Count;
+    var refreshTimer = 15;
+    ViewData["Title"] = analyticsType + " Analysis";
+}
+
+<head>
+    <meta http-equiv="refresh" content="@refreshTimer">
+</head>
+<h1>@analyticsType Output - @total total entries</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th />
+            <th>
+                @analyticsType
+            </th>
+            <th>
+                Count
+            </th>
+            <th>
+                Percentage
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>
+                    @(Model.Items.IndexOf(item) + 1).
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Field)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Count)
+                </td>
+                <td>
+                    @(String.Format("{0:P2}", (decimal)item.Count / total))
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

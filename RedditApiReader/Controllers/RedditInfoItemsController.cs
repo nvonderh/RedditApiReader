@@ -25,12 +25,22 @@ namespace RedditApiReader.Controllers
                                               Count = group.Count()
                                           }).OrderByDescending(x => x.Count)
                                           .ToList();
-            List<RedditDomainCount> returnList = new List<RedditDomainCount>();
+
+            List<RedditCountItem> returnList = new List<RedditCountItem>();
             for (int i = 0; i < desiredCount; i++)
             {
-                returnList.Add(new RedditDomainCount(outputList[i].Domain ?? "Domain Missing", outputList[i].Count));
+                returnList.Add(new RedditCountItem(outputList[i].Domain ?? "Domain Missing", outputList[i].Count));
             }
-            return View(returnList);
+
+            return RedditStatistics(returnList, "Domain");
+        }
+
+        // GET: RedditInfoItems/RedditStatistics
+        public IActionResult RedditStatistics(List<RedditCountItem> items, string analysisType)
+        {
+            int count = _context.RedditInfoItem.Count();
+            RedditDisplayViewer output = new RedditDisplayViewer(items, analysisType, count);
+            return View("RedditStatistics", output);
         }
 
         // GET: RedditInfoItems/BySubreddit
@@ -43,23 +53,20 @@ namespace RedditApiReader.Controllers
                                               Count = group.Count()
                                           }).OrderByDescending(x => x.Count)
                                           .ToList();
-            List<RedditSubredditCount> returnList = new List<RedditSubredditCount>();
+
+            List<RedditCountItem> returnList = new List<RedditCountItem>();
             for (int i = 0; i < desiredCount; i++)
             {
-                returnList.Add(new RedditSubredditCount(outputList[i].Subreddit ?? "Subreddit Missing", outputList[i].Count));
+                returnList.Add(new RedditCountItem(outputList[i].Subreddit ?? "Subreddit Missing", outputList[i].Count));
             }
-            return View(returnList);
+
+            return RedditStatistics(returnList, "Subreddit");
         }
 
         // GET: RedditInfoItems
         public async Task<IActionResult> Index()
         {
             return View(await _context.RedditInfoItem.ToListAsync());
-        }
-
-        private bool RedditInfoItemExists(int id)
-        {
-          return _context.RedditInfoItem.Any(e => e.Id == id);
         }
     }
 }

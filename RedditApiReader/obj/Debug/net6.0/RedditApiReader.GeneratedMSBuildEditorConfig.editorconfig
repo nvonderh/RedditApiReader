@@ -16,16 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Nathan\Documents\GitHub\RedditApiReader\RedditApiReader
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/ByDomain.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXEJ5RG9tYWluLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/BySubreddit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXEJ5U3VicmVkZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/RedditInfoItems/RedditStatistics.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVkZGl0SW5mb0l0ZW1zXFJlZGRpdFN0YXRpc3RpY3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nathan/Documents/GitHub/RedditApiReader/RedditApiReader/Views/Shared/Error.cshtml]
