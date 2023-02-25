@@ -1,0 +1,34 @@
+﻿@model IEnumerable<RedditApiReader.Models.RedditDomainCount>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta http-equiv="refresh" content="15">
+</head>
+<h1>Domain Output</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Domain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Count)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Domain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Count)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
