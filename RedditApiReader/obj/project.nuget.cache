@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Szwv5/Dh0S0gNK9+lR7a8L10tRWTBzv8Cq9i6mnblx1tIYvkop3S36e4mGtBeAy2S6/esbTCNnBLSZriRg1G5g==",
+  "dgSpecHash": "3A0Qjn+QoToZefCcRvv+EEjvT/5q+V3QGsQbAjxLcLUqb7ehQaOyDc8qZye+EVvqvghiZ4b3iqHwvLHMbjz+Aw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nathan\\Documents\\GitHub\\RedditApiReader\\RedditApiReader\\RedditApiReader.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.3\\microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.3\\microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.3\\microsoft.entityframeworkcore.design.7.0.3.nupkg.sha512",
+    "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.3\\microsoft.entityframeworkcore.inmemory.7.0.3.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.3\\microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.3\\microsoft.entityframeworkcore.sqlserver.7.0.3.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.14\\microsoft.entityframeworkcore.tools.6.0.14.nupkg.sha512",

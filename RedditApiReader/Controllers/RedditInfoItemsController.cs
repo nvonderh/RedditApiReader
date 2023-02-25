@@ -15,6 +15,14 @@ namespace RedditApiReader.Controllers
             _context = context;
         }
 
+        // GET: RedditInfoItems/RedditStatistics
+        public IActionResult RedditStatistics(List<RedditCountItem> items, string analysisType)
+        {
+            int count = _context.RedditInfoItem.Count();
+            RedditDisplayViewer output = new RedditDisplayViewer(items, analysisType, count);
+            return View("RedditStatistics", output);
+        }
+
         // GET: RedditInfoItems/ByDomain
         public IActionResult ByDomain()
         {
@@ -27,20 +35,12 @@ namespace RedditApiReader.Controllers
                                           .ToList();
 
             List<RedditCountItem> returnList = new List<RedditCountItem>();
-            for (int i = 0; i < desiredCount; i++)
+            for (int i = 0; i < desiredCount && i < outputList.Count; i++)
             {
                 returnList.Add(new RedditCountItem(outputList[i].Domain ?? "Domain Missing", outputList[i].Count));
             }
 
             return RedditStatistics(returnList, "Domain");
-        }
-
-        // GET: RedditInfoItems/RedditStatistics
-        public IActionResult RedditStatistics(List<RedditCountItem> items, string analysisType)
-        {
-            int count = _context.RedditInfoItem.Count();
-            RedditDisplayViewer output = new RedditDisplayViewer(items, analysisType, count);
-            return View("RedditStatistics", output);
         }
 
         // GET: RedditInfoItems/BySubreddit
@@ -55,7 +55,7 @@ namespace RedditApiReader.Controllers
                                           .ToList();
 
             List<RedditCountItem> returnList = new List<RedditCountItem>();
-            for (int i = 0; i < desiredCount; i++)
+            for (int i = 0; i < desiredCount && i < outputList.Count; i++)
             {
                 returnList.Add(new RedditCountItem(outputList[i].Subreddit ?? "Subreddit Missing", outputList[i].Count));
             }
@@ -72,7 +72,7 @@ namespace RedditApiReader.Controllers
         // GET: RedditInfoItems
         public IActionResult Help()
         {
-            return View();
+            return View("Help");
         }
     }
 }
