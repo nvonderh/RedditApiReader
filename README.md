@@ -23,4 +23,7 @@ You will also need to run an Update-Database command from the Package Manager Co
 Make sure that the appropriate connection string is in the appsettings.json file.
 
 ###TODO
-Add a countdown to refresh on the pages
+
+- Add a countdown to refresh on the pages
+- Add logic to catch when the API's limit has been reached (currently set by Reddit to 60 per minute)
+- Implement automatically refreshing the bearer token from Reddit when it expires

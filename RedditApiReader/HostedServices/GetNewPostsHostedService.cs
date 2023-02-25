@@ -74,12 +74,16 @@ namespace RedditApiReader.HostedServices
             var task = client.GetAsync(url);
             var response = task.Result;
 
-            if (response.StatusCode != System.Net.HttpStatusCode.OK)
+            if (response == null)
+            {
+                _logger.LogInformation("Nothing returned!");
+            }
+            else if (response.StatusCode != System.Net.HttpStatusCode.OK)
             {
                 _logger.LogInformation(
-                    "Bad request returned {0}!", response.StatusCode);
+                    "Bad request returned, StatusCode {0}!", response.StatusCode);
             }
-            else if (response != null)
+            else
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var jsonObject = Newtonsoft.Json.Linq.JObject.Parse(jsonString);
@@ -94,11 +98,6 @@ namespace RedditApiReader.HostedServices
 
                 _logger.LogInformation(
                     "Database successfully updated. Count: {Count}", count);
-            }
-            else
-            {
-
-                _logger.LogInformation("Nothing returned!");
             }
         }
 
